@@ -5,16 +5,18 @@
 import random
 
 answer = random.randint(1, 100)
-
+i = 0
 while True:
 	user_ans = input('請輸入數字：')
 	user_ans = int(user_ans)
+	i += 1
 	if user_ans == answer:
 		print('猜對了！')
 		break
 	else:
 		a = user_ans - answer
+		
 		if a > 0:
-			print('小於', user_ans)
+			print('小於', user_ans, '猜了', i, '次')
 		else:
-			print('大於', user_ans)
+			print('大於', user_ans, '猜了', i, '次')
